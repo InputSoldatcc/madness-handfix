@@ -71,7 +71,7 @@ public class GameLoadingSystem : Walgelijk.System
                 if (!m.Errors.IsEmpty)
                 {
                     Draw.Colour = Colors.Red.WithAlpha(Utilities.RandomFloat());
-                    f += Utilities.RandomPointInCircle(0, 3);
+                    f += MadnessVector2.RandomPointInCircle(0, 3);
                 }
 
                 Draw.Text(m.Id, f, Vector2.One, HorizontalTextAlign.Right, VerticalTextAlign.Top);

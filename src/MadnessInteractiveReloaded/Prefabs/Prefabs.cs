@@ -102,7 +102,7 @@ public static class Prefabs
     /// <returns></returns>
     public static Entity CreateBulletHole(Scene scene, Vector2 position, float angleDegrees, float scale = 32)
     {
-        var p = position + Utilities.RandomPointInCircle(0, 50); //TODO eigenlijk moet hij kiezen in een punt in de zone of iets :(
+        var p = position + MadnessVector2.RandomPointInCircle(0, 50); //TODO eigenlijk moet hij kiezen in een punt in de zone of iets :(
 
         var isInFront = false;
 
@@ -161,7 +161,7 @@ public static class Prefabs
         float scale = 256)
     {
         var p = position +
-                Utilities.RandomPointInCircle(0, 50); //TODO eigenlijk moet hij kiezen in een punt in de zone of iets :(
+                MadnessVector2.RandomPointInCircle(0, 50); //TODO eigenlijk moet hij kiezen in een punt in de zone of iets :(
         //TODO dubbele code
         var isInsideWall = (Level.CurrentLevel?.GetFloorLevelAt(p.X) > p.Y) ||
                            scene.GetSystem<PhysicsSystem>().QueryPoint(p, buffer, CollisionLayers.BlockBullets) > 0;

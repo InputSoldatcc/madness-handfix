@@ -67,7 +67,7 @@ public static class GoreTestScene
 
                         if (Damage > 0.2f)
                         {
-                            localMouse += Utilities.RandomPointInCircle() * 0.2f;
+                            localMouse += MadnessVector2.RandomPointInCircle() * 0.2f;
                             body.TryAddInnerCutoutHole(localMouse.X, localMouse.Y, Damage + 1);
                         }
                     }

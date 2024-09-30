@@ -192,7 +192,7 @@ public class ExperimentSelectableCharacter : ExperimentModeComponent.IExperiment
                 Component.Kill();
                 exp.SelectionManager.DeselectAll();
                 // we ignore animation constraints
-                MadnessUtils.TurnIntoRagdoll(scene, Component, Utilities.RandomPointInCircle() * 20, Utilities.RandomFloat(-1, 1));
+                MadnessUtils.TurnIntoRagdoll(scene, Component, MadnessVector2.RandomPointInCircle() * 20, Utilities.RandomFloat(-1, 1));
                 if (!MadnessUtils.IsPlayerAlive(scene))
                     scene.GetSystem<ExperimentModeSystem>().ExitEditMode(exp);
             });

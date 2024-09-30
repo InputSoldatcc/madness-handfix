@@ -211,7 +211,7 @@ public class SpawnMenuAbilityComponent : CharacterAbilityComponent
                         var ally = Prefabs.CreateCharacter(scene, new CharacterPrefabParams
                         {
                             Faction = a.Character.Faction,
-                            Bottom = a.Character.Positioning.GlobalCenter + Utilities.RandomPointInCircle(200, 2000),
+                            Bottom = a.Character.Positioning.GlobalCenter + MadnessVector2.RandomPointInCircle(200, 2000),
                             Name = "Ally :)",
                             Stats = Registries.Stats["engineer"],
                             Look = Registries.Looks["agent3"],

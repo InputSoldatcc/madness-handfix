@@ -274,7 +274,7 @@ public class WeaponSystem : Walgelijk.System
         for (int i = 0; i < data.BulletsPerShot; i++)
         {
             var dir = barrel.direction;
-            dir += Utilities.RandomPointInCircle() * (1 - data.Accuracy);
+            dir += MadnessVector2.RandomPointInCircle() * (1 - data.Accuracy);
             MadnessUtils.Shake(weapon.Data.Damage * 4);
             CastBulletRay(barrel.position, dir, weapon, data, wielder, 0);
         }
@@ -556,7 +556,7 @@ public class WeaponSystem : Walgelijk.System
                 if (Scene.TryGetComponentFrom<BodyPartShapeComponent>(hit.Entity, out var damagable) && victimChar != null)
                 {
                     var charScaleSqrd = victimChar.Positioning.Scale * victimChar.Positioning.Scale;
-                    var randomness = Utilities.RandomPointInCircle(-0.1f, 0.1f);
+                    var randomness = MadnessVector2.RandomPointInCircle(-0.1f, 0.1f);
                     randomness.X *= 2;
                     var p = localPoint + randomness;
                     var s = GetBulletHoleSize(totalDistance, weapon) / (iteration + 1) * (isExitWound ? 2 : 0.5f);
@@ -613,7 +613,7 @@ public class WeaponSystem : Walgelijk.System
         casing.Rotation = transform.Rotation;
         casing.Size = weapon.Data.CasingSize * 60;
         casing.Position = Vector2.Transform(weapon.CasingEjectionPoint, transform.LocalToWorldMatrix);
-        casing.Velocity = Vector2.TransformNormal(Vector2.UnitY, transform.LocalToWorldMatrix) * 2000 + Utilities.RandomPointInCircle(0, 500);
+        casing.Velocity = Vector2.TransformNormal(Vector2.UnitY, transform.LocalToWorldMatrix) * 2000 + MadnessVector2.RandomPointInCircle(0, 500);
         Scene.GetSystem<ParticleSystem>().CreateParticle(particles, casing);
     }
 

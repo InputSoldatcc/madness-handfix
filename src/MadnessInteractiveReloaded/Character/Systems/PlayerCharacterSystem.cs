@@ -74,7 +74,7 @@ public class PlayerCharacterSystem : Walgelijk.System
                     if (item.Faction.IsEnemiesWith(character.Faction))
                     {
                         item.Kill();
-                        MadnessUtils.TurnIntoRagdoll(Scene, item, Utilities.RandomPointInCircle() * 140, Utilities.RandomFloat(-90, 90));
+                        MadnessUtils.TurnIntoRagdoll(Scene, item, MadnessVector2.RandomPointInCircle() * 140, Utilities.RandomFloat(-90, 90));
                     }
             }
         }

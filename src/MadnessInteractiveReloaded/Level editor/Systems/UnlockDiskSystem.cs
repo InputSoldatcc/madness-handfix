@@ -110,7 +110,7 @@ public class UnlockDiskSystem : Walgelijk.System //🎈
 
                 // draw disk image
                 {
-                    var diskRect = (float intensity) => new Rect(center + Utilities.RandomPointInCircle(0, 2 * intensity),
+                    var diskRect = (float intensity) => new Rect(center + MadnessVector2.RandomPointInCircle(0, 2 * intensity),
                         new Vector2(s + Utilities.RandomFloat(-20, 20) * intensity, s + Utilities.RandomFloat(-10, 10) * intensity));
 
                     Draw.BlendMode = BlendMode.AlphaBlend;
@@ -168,7 +168,7 @@ public class UnlockDiskSystem : Walgelijk.System //🎈
 
                     Draw.Colour = Colors.Red.WithAlpha(phase1).WithAlpha(0.1f);
                     Draw.Text(str,
-                        strP + Utilities.RandomPointInCircle(0, 20), Vector2.One + 0.1f * new Vector2(Utilities.RandomFloat(0, 25), Utilities.RandomFloat(0, 0.5f)),
+                        strP + MadnessVector2.RandomPointInCircle(0, 20), Vector2.One + 0.1f * new Vector2(Utilities.RandomFloat(0, 25), Utilities.RandomFloat(0, 0.5f)),
                         HorizontalTextAlign.Center, VerticalTextAlign.Middle);
 
                     Draw.Colour = Colors.White.WithAlpha(phase1);
@@ -186,7 +186,7 @@ public class UnlockDiskSystem : Walgelijk.System //🎈
 
                     string expl = "Disks can be toggled in the main menu.";
 
-                    Draw.Text(expl, p + Utilities.RandomPointInCircle(0, 5),
+                    Draw.Text(expl, p + MadnessVector2.RandomPointInCircle(0, 5),
                         Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top, textBoxWidth: Window.Width / 2);
                     Draw.Colour = Colors.White * phase1;
                     Draw.Text(expl, p, Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top, textBoxWidth: Window.Width / 2);

@@ -98,7 +98,7 @@ public class MachinistLevelSystem : Walgelijk.System
             var r = new Rect(b.Position + b.Normal * size.X / 6, size);
             Draw.Quad(r.TopLeft, r.GetSize());
 
-            Draw.Line(b.Position + Utilities.RandomPointInCircle(0, 7), b.Position + b.Normal * Utilities.RandomFloat(10, 140) + Utilities.RandomPointInCircle(0, 25), Utilities.RandomFloat(7, 23));
+            Draw.Line(b.Position + MadnessVector2.RandomPointInCircle(0, 7), b.Position + b.Normal * Utilities.RandomFloat(10, 140) + MadnessVector2.RandomPointInCircle(0, 25), Utilities.RandomFloat(7, 23));
         }
 
         if (Scene.FindAnyComponent<TrainEngineComponent>(out var engine) && !engine.HasExploded)

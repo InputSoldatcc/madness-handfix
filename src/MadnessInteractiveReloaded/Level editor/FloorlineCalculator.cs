@@ -42,7 +42,7 @@ public static class FloorlineCalculator
         for (int i = lvl.FloorLine.Count - 2; i >= 1; i--)
         {
             var angleLeft = MadnessVector2.Normalize(lvl.FloorLine[i] - lvl.FloorLine[i - 1]);
-            var angleRight = Vector2.Normalize(lvl.FloorLine[i + 1] - lvl.FloorLine[i]);
+            var angleRight = MadnessVector2.Normalize(lvl.FloorLine[i + 1] - lvl.FloorLine[i]);
 
             // remove colinear points
             if (Vector2.Dot(angleLeft, angleRight) > threshold)

@@ -95,9 +95,9 @@ public class RichBossSystem : Walgelijk.System
 
                 var p = new Vector2(Window.Width / 2, 10);
                 Draw.Colour = c.WithAlpha(0.5f);
-                Draw.Text(character.Name, p + Utilities.RandomPointInCircle(1, 5) * (healthFlash * 2 + 1), Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top);
+                Draw.Text(character.Name, p + MadnessVector2.RandomPointInCircle(1, 5) * (healthFlash * 2 + 1), Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top);
                 Draw.Colour = c.WithAlpha(0.9f);
-                Draw.Text(character.Name, p + Utilities.RandomPointInCircle(0, 1) * (healthFlash * 2 + 1), Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top);
+                Draw.Text(character.Name, p + MadnessVector2.RandomPointInCircle(0, 1) * (healthFlash * 2 + 1), Vector2.One, HorizontalTextAlign.Center, VerticalTextAlign.Top);
 
                 var healthRect = new Rect(new Vector2(Window.Width / 2, 50), new Vector2(Window.Width / 2, 14));
 
@@ -537,7 +537,7 @@ public class RichBossSystem : Walgelijk.System
         var e = Scene.CreateEntity();
         var t = Scene.AttachComponent(e, new TransformComponent
         {
-            Position = new Vector2(x, MadnessUtils.GetFloorLevelAt(x)) + Utilities.RandomPointInCircle(0, 10),
+            Position = new Vector2(x, MadnessUtils.GetFloorLevelAt(x)) + MadnessVector2.RandomPointInCircle(0, 10),
             Scale = tex.Value.Size * MadnessConstants.BackgroundSizeRatio * Utilities.RandomFloat(0.95f, 1.053f),
         });
         var s = Scene.AttachComponent(e, new SpriteComponent(tex.Value)

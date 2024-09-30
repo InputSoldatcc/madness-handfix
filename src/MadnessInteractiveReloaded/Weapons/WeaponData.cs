@@ -88,7 +88,7 @@ public class WeaponData
     /// Calculated like:<br></br>
     /// <c>           
     /// var dir = barrel.direction;<br></br>
-    /// dir += Utilities.RandomPointInCircle()* (1 - data.Accuracy);
+    /// dir += Utilities.RandomPointInCircle()* (1 - data.Accuracy); //Imagine using the old method, Couldnt be me!
     /// </c>
     /// </summary>
     public float Accuracy;
