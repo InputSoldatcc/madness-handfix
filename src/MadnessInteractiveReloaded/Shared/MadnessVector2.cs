@@ -1,8 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.Numerics;
-using System.Reflection;
-using Newtonsoft.Json.Serialization;
 using Walgelijk;
 
 namespace MIR;
@@ -22,7 +20,7 @@ public class MadnessVector2
     /// <param name="toNormalize"></param>
     public static void SelfNormalize(ref Vector2 toNormalize)
     {
-        toNormalize = toNormalize / toNormalize.Length();
+        toNormalize /= toNormalize.Length();
     }
 
     /// <summary>
@@ -81,7 +79,7 @@ public class MadnessVector2
     /// <param name="minRadius"></param>
     /// <param name="maxRadius"></param>
     /// <returns></returns>
-    public static Vector2 GetRandomPointInCircle(float minRadius = 0f, float maxRadius = 1f)
+    public static Vector2 RandomPointInCircle(float minRadius = 0f, float maxRadius = 1f)
     {
         return Normalize(new Vector2(Utilities.RandomFloat(-1f), Utilities.RandomFloat(-1f))) * Utilities.RandomFloat(minRadius, maxRadius);
     }
