@@ -18,7 +18,7 @@ public class AccurateShotSystem : Walgelijk.System
         {
             if (!comp.OriginCharacter.TryGet(Scene, out var origin))
                 continue;
-
+                
             if (!comp.TargetCharacter.TryGet(Scene, out var target))
                 continue;
 
