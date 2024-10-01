@@ -62,7 +62,6 @@
 		<PackageReference Include="Walgelijk.OpenTK" Version="0.22.7" />
 		<PackageReference Include="Walgelijk.OpenTK.MotionTK" Version="1.1.27" />
 		<PackageReference Include="Walgelijk.ParticleSystem" Version="0.2.34" />
-		<PackageReference Include="Walgelijk.Physics" Version="0.3.2" />
 		<PackageReference Include="Walgelijk.PortAudio" Version="0.2.0" />
 		<PackageReference Include="Walgelijk.SimpleDrawing" Version="1.26.4" />
 	</ItemGroup>
@@ -124,5 +123,9 @@
 		<None Update="swscale-6.dll">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Shared\MuqazzizV1\" />
 	</ItemGroup>
 </Project>
